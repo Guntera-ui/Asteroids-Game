@@ -2,7 +2,7 @@ import pygame
 
 from constants import SCREEN_HEIGHT, SCREEN_WIDTH
 from logger import log_state
-from player import *
+from player import Player
 
 
 def main():
@@ -22,6 +22,7 @@ def main():
         log_state()
 
         screen.fill("black")
+        player.update(dt)
         player.draw(screen)
         pygame.display.flip()
         # limit the framerate to 60 FPS
